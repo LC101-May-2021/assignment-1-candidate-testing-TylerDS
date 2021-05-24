@@ -15,24 +15,28 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-
+  candidateName = input.question("What is your name? ");
+  console.log("Welcome " + candidateName + "!");
 }
 
 function askQuestion() {
-  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-
-
+  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer
+  question = "Who was the first American woman in space? ";
+  candidateAnswer = input.question(question);
+  correctAnswer = "Sally Ride";
 }
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
-
   let grade;
+  if (candidateAnswer === correctAnswer){
+    grade = "correct";
+  } else {
+    grade = "incorrect";
+  }
   
-
-  return grade;
+  console.log("Your answer was " + grade + "!");
 }
 
 function runProgram() {
